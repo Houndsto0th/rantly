@@ -12,6 +12,7 @@
     "ember-qunit": "0.2.8",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "materialize": "~0.95.0"
+    "materialize": "~0.95.0",
+    "ember-simple-auth": "0.7.3"
   }
 }

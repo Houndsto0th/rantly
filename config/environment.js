@@ -28,9 +28,22 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+
+
+
     sassOptions: {
       includePaths: ['bower_components/materialize/sass']
     },
+  };
+
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise',
+    identificationAttributeName: 'email'
+  };
+
+  ENV['simple-auth-devise'] = {
+    crossOriginWhitelist: ['*'],
+    identificationAttributeName: 'email'
   };
 
   if (environment === 'development') {
