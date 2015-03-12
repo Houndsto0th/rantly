@@ -10,7 +10,6 @@
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
-
 @import url(http://fonts.googleapis.com/css?family=Laila:400,700);
 @import url(http://fonts.googleapis.com/css?family=Hind:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
@@ -295,12 +294,6 @@ strong {
 button h4 {
     font-family: Hind, Helvetica, Arial, sans-serif
 }
-@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot);src:url(../fonts/fontawesome-webfont.eot?#iefix) format('embedded-opentype'),
-url(../fonts/fontawesome-webfont.woff) format('woff'),
-url(../fonts/fontawesome-webfont.ttf) format('truetype'),
-url(../fonts/fontawesome-webfont.svg) format('svg')
-}
-
 .content {
     padding-left: 15px;
     clear: both;
@@ -452,7 +445,6 @@ textarea {
     display: block;
     width: 100%;
     margin-bottom: 15px;
-    padding: 10px;
     font-size: 18px;
     line-height: 1.72222;
     color: #34495E;
@@ -472,12 +464,12 @@ textarea:focus {
     margin-bottom: 15px
 }
 .form-group input {
-    padding: 5px
+    padding: 0px
 }
 .login-form {
     position: relative;
     padding: 15px;
-    border-radius: 3px
+    border-radius: 3px;
 }
 .login-form .control-group {
     position: relative
@@ -651,9 +643,9 @@ textarea:focus {
 .rant-search-field {
     padding: 0;
     margin: 0;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 700;
-    line-height: 23px;
+    line-height: 20px;
     color: #34495E;
     text-indent: 0;
     background: 0 0;
