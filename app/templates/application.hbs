@@ -1,6 +1,10 @@
 <nav>
   <div class="nav-wrapper rantly-blue">
-    <a href="" class="brand-logo">Rantly</a>
+    <a href="" class="brand-logo">
+      {{#link-to 'rants'}}
+      Rantly
+      {{/link-to}}
+    </a>
     </div>
   </nav>
   <section class="content">
@@ -34,9 +38,11 @@
 </aside>
 
 <header class="app-inner-header">
-  <a href="/new">
-    <button class="button button-invert">New Rant</button>
-  </a>
+  <button class="button button-invert">
+  {{#link-to 'rants.new'}}
+  New Rant
+  {{/link-to}}
+  </button>
 </header>
 
 
