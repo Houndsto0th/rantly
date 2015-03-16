@@ -1,1 +1,31 @@
-Now I'm in the new new
+<main>
+
+
+<article class="rant-item form">
+  <header class="rant-header">
+    <div class="rant-header-title">
+      {{input autofocus="true" placeholder="Rant Title" type="text"}}
+    </div>
+    <div class="rant-header-actions">
+      <button class="button button-primary" data-ember-action="737">
+        <span class="fa fa-send"> Rant</span>
+      </button>
+        <button class="button button-default" data-ember-action="743">
+          <span class="fa fa-times-circle-o"> Cancel</span>
+        </button>
+    </div>
+  </header>
+
+  <aside class="rant-secondary">
+    <div ><div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo"></div>
+      <h5></h5>
+      <h6></h6>
+    </div>
+    character placeholder
+  </aside>
+
+  <section class="rant-item-content">
+    {{textarea placeholder="Start your rant." rows="13"}}
+  </section>
+</article>
+</main>
