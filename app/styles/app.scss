@@ -6,6 +6,7 @@
 
 
 .brand-logo {
+  margin-left: 10px;
   font-weight: bold;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -317,7 +318,7 @@ main {
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .2)
 }
 .app-inner-header {
-    width: 73.6687%
+    width: 74.5787%
 }
 button {
     -webkit-appearance: button;
@@ -635,8 +636,8 @@ textarea:focus {
     border-radius: 3px
 }
 .rant-search {
+    padding-left: 10px;
     position: relative;
-    padding: 5px;
     color: #3498DB;
     background: 0 0/16px 16px #3498DB
 }
@@ -654,7 +655,7 @@ textarea:focus {
     box-shadow: none
 }
 .rant-search-field:focus {
-    border-color: #3498DB
+    border: none;
 }
 .rant-search-field::-moz-placeholder {
     color: #fff;

@@ -2,22 +2,24 @@
   <section class="rants-index">
 
   {{#each 'rant' in model}}
-    <article class="ember-view rant-item">
+    <article class="rant-item">
       <header class="rant-header">
         <div class="rant-header-title">
-          <a class="ember-view" href="/rants/43">
-
             <h3>{{rant.title}}</h3>
-          </a>
         </div>
+
         <div class="rant-header-actions">
-          <button class="button button-primary"><i class="fa fa-pencil-square-o">Edit</i></button>
+          {{#if session.isAuthenticated}}
+            {{#is-owner param1=rant.user.id param2=session.user_id}}
+              <button class="button button-primary"><i class="fa fa-pencil-square-o">Edit</i></button>
+            {{/is-owner}}
+          {{/if}}
         </div>
       </header>
 
       <aside class="rant-secondary">
-        <div class="ember-view author"><div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo"></div>
-        <h5> </h5>
+        <div class="author"><div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo"></div>
+        <h5></h5>
         <h6></h6>
       </div>
     </aside>

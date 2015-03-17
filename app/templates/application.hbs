@@ -18,6 +18,7 @@
 
     <form class="login-form" {{action 'authenticate' on='submit'}}>
       {{#if session.isAuthenticated}}
+      <h4>Hi {{session.user_first_name}}</h4>
       {{else}}
         <div class="form-group">
           {{input id='identification' placeholder='Enter Email' value=identification}}
