@@ -10,7 +10,7 @@
 
         <div class="rant-header-actions">
           {{#if session.isAuthenticated}}
-            {{#is-owner param1=rant.user.id param2=session.user_id}}
+            {{#is-owner rantuid=rant.data.user sessionuid=session.user_id}}
               <button class="button button-primary"><i class="fa fa-pencil-square-o">Edit</i></button>
             {{/is-owner}}
           {{/if}}

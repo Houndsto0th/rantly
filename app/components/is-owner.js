@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   isOwner: function() {
-    return this.get('param1').toString() === this.get('param2').toString();
-  }.property('param1', 'param2')
-
+    console.log(this.get('rantuid') + " rant user id");
+    console.log(this.get('sessionuid') + " session user id");
+    return this.get('rantuid').toString() === this.get('sessionuid').toString();
+  }.property('rantuid', 'sessionuid')
 });

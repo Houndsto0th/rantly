@@ -1,10 +1,15 @@
 <nav>
-  <div class="nav-wrapper rantly-blue">
-    <a href="" class="brand-logo">
-      {{#link-to 'rants'}}
-      Rantly
-      {{/link-to}}
-    </a>
+  <div class="nav-wrapper rantly-blue valign-wrapper">
+    <ul id="nav-mobile" class="left hide-on-med-and-down valign">
+        <li>{{#link-to 'rants' class="brand-logo"}}Rantly{{/link-to}}</li>
+        {{#if session.isAuthenticated}}
+        {{else}}
+        <li>{{#link-to 'rants'}}Signup{{/link-to}}</li>
+        {{/if}}
+        <li>{{#link-to 'rants'}}Users{{/link-to}}</li>
+        <li>{{#link-to 'rants'}}Rants{{/link-to}}</li>
+    </ul>
+
     </div>
   </nav>
   <section class="content">
@@ -43,11 +48,11 @@
 
 <header class="app-inner-header">
   {{#if session.isAuthenticated}}
-    <button class="button button-invert">
       {{#link-to 'rants.new'}}
+    <button class="button button-invert">
         New Rant
-      {{/link-to}}
     </button>
+      {{/link-to}}
   {{/if}}
 </header>
 
