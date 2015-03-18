@@ -26,93 +26,7 @@ nav ul li {
 :before {
     box-sizing: border-box
 }
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline
-}
+
 article,
 aside,
 details,
@@ -163,7 +77,7 @@ table {
 }
 @-webkit-keyframes slide-in-top {
     0% {
-        top: -1000px
+        top: -2000px
     }
     100% {
         top: 0
@@ -212,7 +126,7 @@ table {
     -webkit-animation: fade-out .4s ease-out
 }
 .slide-in-top {
-    -webkit-animation: slide-in-top .4s ease-out
+    -webkit-animation: slide-in-top .9s ease-out
 }
 .slide-in-left {
     -webkit-animation: slide-in-left .4s ease-out
@@ -643,6 +557,7 @@ textarea:focus {
     border-radius: 3px
 }
 .rant-search {
+    height: 47px;
     padding-left: 10px;
     position: relative;
     color: #3498DB;
@@ -721,8 +636,9 @@ input[type=tel],
 input[type=number],
 input[type=search],
 textarea.materialize-textarea {
+  height: 45px;
   border: 1px solid rgba(159, 159, 159, 0.47);
-  
+
 }
 
 input[type=text]:focus,
