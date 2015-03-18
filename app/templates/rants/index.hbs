@@ -1,17 +1,30 @@
 <main id="scroll">
   <section class="rants-index">
 
-  {{#each 'rant' in model}}
+  {{#each rant in model itemController='rant'}}
     <article class="rant-item">
       <header class="rant-header">
         <div class="rant-header-title">
-            <h3>{{rant.title}}</h3>
+          {{#if rant.isEditing}}
+              {{input value=rant.title}}
+            {{else}}
+              <h3>{{rant.title}}</h3>
+            {{/if}}
         </div>
 
         <div class="rant-header-actions">
           {{#if session.isAuthenticated}}
             {{#is-owner rantuid=rant.data.user sessionuid=session.user_id}}
-              <button class="button button-primary"><i class="fa fa-pencil-square-o">Edit</i></button>
+            {{#if rant.isEditing}}
+            <button class="button button-primary">
+              <span class="fa fa-send"> Rant</span>
+            </button>
+              <button {{action 'cancelEdit'}} class="button button-default">
+                <span class="fa fa-times-circle-o"> Cancel</span>
+              </button>
+              {{else}}
+              <button {{action 'editRant'}}class="button button-primary"><i class="fa fa-pencil-square-o">Edit</i></button>
+              {{/if}}
             {{/is-owner}}
           {{/if}}
         </div>
@@ -25,7 +38,11 @@
     </aside>
 
     <section class="rant-item-content">
-      {{rant.body}}
+      {{#if rant.isEditing}}
+        {{textarea value=rant.body}}
+      {{else}}
+        {{rant.body}}
+      {{/if}}
     </section>
 
   </article>
