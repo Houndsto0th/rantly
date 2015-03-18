@@ -16,7 +16,7 @@
           {{#if session.isAuthenticated}}
             {{#is-owner rantuid=rant.data.user sessionuid=session.user_id}}
             {{#if rant.isEditing}}
-            <button class="button button-primary">
+            <button {{action 'saveRant'}} class="button button-primary">
               <span class="fa fa-send"> Rant</span>
             </button>
               <button {{action 'cancelEdit'}} class="button button-default">
@@ -34,6 +34,11 @@
         <div class="author"><div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo"></div>
         <h5></h5>
         <h6></h6>
+        {{#if rant.isEditing}}
+        <div {{bind-attr class= "rantLongEnough:long:short"}}>
+          {{rant.body.length}}  / 144 characters
+        </div>
+        {{/if}}
       </div>
     </aside>
 
