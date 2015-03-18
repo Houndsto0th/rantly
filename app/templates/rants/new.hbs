@@ -4,10 +4,10 @@
 <article class="rant-item form">
   <header class="rant-header">
     <div class="rant-header-title">
-      {{input autofocus="true" placeholder="Rant Title" type="text"}}
+      {{input autofocus="true" placeholder="Rant Title" type="text" value=rantTitle}}
     </div>
     <div class="rant-header-actions">
-      <button class="button button-primary">
+      <button {{action 'newRant'}} class="button button-primary">
         <span class="fa fa-send"> Rant</span>
       </button>
         <button class="button button-default">
