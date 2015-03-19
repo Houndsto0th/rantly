@@ -7,6 +7,7 @@ export default Ember.View.extend({
       accordion : false
     });
     $(".button-collapse").sideNav();
+    $(".rant-item").addClass('slide-in-left');
   }
 
 });

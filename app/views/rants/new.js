@@ -7,7 +7,8 @@ export default Ember.View.extend({
     $(".rant-item").addClass('slide-in-left');
 
     this.$().on('click', '.button-default', function (){
-      $('.rant-item').addClass('slide-out-right').then(self.get('controller').send('goToRants'));
+      $('.rant-item').addClass('slide-out-right');
+      self.get('controller').send('goToRants');
     });
   },
 

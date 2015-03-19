@@ -7,13 +7,12 @@ export default Ember.ObjectController.extend({
       var self = this;
 
       Ember.run.later(function () {
-        self.transitionToRoute('rants');
-      }, 400);
+        self.transitionToRoute('rants.index');
+      }, 50);
     },
 
     newRant: function () {
       var user = this.get('session.email'),
-          user_id = this.get('session.user_id'),
           body = this.get('rantContent'),
           title = this.get('rantTitle'),
           self = this;
@@ -25,13 +24,14 @@ export default Ember.ObjectController.extend({
                                             { body: body,
                                               title: title,
                                               user: current, });
+          self.set("title", '');
+          self.set("body", '')
           rant.save().then(function () {
-            $('.rant-item').addClass('slide-out-right');
-
+            self.transitionToRoute('rants.index');
             Ember.run.later(function () {
-              self.transitionToRoute('rants');
-            }, 400);
-          });
+              Ember.$('.rant-item').addClass('slide-out-right');
+            }, 250);
+          }.bind(self));
         }
       });
     },

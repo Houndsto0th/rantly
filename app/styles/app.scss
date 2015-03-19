@@ -21,6 +21,7 @@ nav ul li {
 @import url(http://fonts.googleapis.com/css?family=Laila:400,700);
 @import url(http://fonts.googleapis.com/css?family=Hind:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,900);
+
 *,
 :after,
 :before {
@@ -120,25 +121,25 @@ table {
     }
 }
 .fade-in {
-    -webkit-animation: fade-in .4s ease-in
+    -webkit-animation: fade-in .5s ease-in
 }
 .fade-out {
-    -webkit-animation: fade-out .4s ease-out
+    -webkit-animation: fade-out .5s ease-out
 }
 .slide-in-top {
     -webkit-animation: slide-in-top .9s ease-out
 }
 .slide-in-left {
-    -webkit-animation: slide-in-left .4s ease-out
+    -webkit-animation: slide-in-left .5s ease-out
 }
 .slide-in-right {
-    -webkit-animation: slide-in-right .4s ease-out
+    -webkit-animation: slide-in-right .5s ease-out
 }
 .slide-out-right {
-    -webkit-animation: slide-out-right 450ms ease-out
+    -webkit-animation: slide-out-right 850ms ease-out
 }
 .slide-out-left {
-    -webkit-animation: slide-out-left 450ms ease-out
+    -webkit-animation: slide-out-left 550ms ease-out
 }
 body {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
