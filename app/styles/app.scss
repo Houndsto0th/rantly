@@ -96,7 +96,7 @@ table {
 }
 @-webkit-keyframes slide-in-right {
     0% {
-        right: -1000px
+        right: -200%
     }
     100% {
         right: 0
@@ -117,7 +117,7 @@ table {
         right: 0
     }
     100% {
-        right: -1000px
+        right: -200%
     }
 }
 .fade-in {
@@ -127,16 +127,16 @@ table {
     -webkit-animation: fade-out .5s ease-out
 }
 .slide-in-top {
-    -webkit-animation: slide-in-top .9s ease-out
+    -webkit-animation: slide-in-top .5s ease-out
 }
 .slide-in-left {
-    -webkit-animation: slide-in-left .5s ease-out
+    -webkit-animation: slide-in-left .4s ease-out
 }
 .slide-in-right {
     -webkit-animation: slide-in-right .5s ease-out
 }
 .slide-out-right {
-    -webkit-animation: slide-out-right 850ms ease-out
+    -webkit-animation: slide-out-right 650ms ease-out
 }
 .slide-out-left {
     -webkit-animation: slide-out-left 550ms ease-out

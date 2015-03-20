@@ -4,10 +4,10 @@
         <li>{{#link-to 'rants' class="brand-logo"}}Rantly{{/link-to}}</li>
         {{#if session.isAuthenticated}}
         {{else}}
-        <li>{{#link-to 'rants'}}Signup{{/link-to}}</li>
+        <li>{{#link-to 'rants.signup'}}Signup{{/link-to}}</li>
         {{/if}}
         <li>{{#link-to 'rants'}}Users{{/link-to}}</li>
-        <li>{{#link-to 'rants'}}Rants{{/link-to}}</li>
+        <li>{{#link-to 'rants.index'}}Rants{{/link-to}}</li>
     </ul>
 
     </div>

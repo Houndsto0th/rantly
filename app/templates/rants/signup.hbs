@@ -1,0 +1,13 @@
+<main>
+  <div class="login-form">
+    {{input placeholder="First Name" type="text" value=firstName}}
+    {{input placeholder="Last Name" type="text" value=lastName}}
+    {{input placeholder="Email" type="text" value=email}}
+    <div class="form-group">
+      {{input placeholder="Password" type="text" value=password}}
+      <label class="login-field-icon"for="password"><i class="fa fa-lock"></i></label>
+    </div>
+
+    <button class="button button-primary button-lg button-block"{{action 'signUp'}}>Sign Up</button>
+  </div>
+</main>

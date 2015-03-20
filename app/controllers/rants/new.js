@@ -12,13 +12,11 @@ export default Ember.ObjectController.extend({
     },
 
     newRant: function () {
-      var user = this.get('session.email'),
-          body = this.get('rantContent'),
+      var user  = this.get('session.email'),
+          body  = this.get('rantContent'),
           title = this.get('rantTitle'),
-          self = this;
-
-      this.store.findQuery('user', {email: user}).then(function(person) {
-        var current = person.get('firstObject')
+          self  = this;
+      this.store.find('user', this.get('session.user_id')).then(function(current) {
         if (body && body.length >= 144 && title) {
           var rant = self.store.createRecord('rant',
                                             { body: body,
@@ -30,12 +28,12 @@ export default Ember.ObjectController.extend({
             self.transitionToRoute('rants.index');
             Ember.run.later(function () {
               Ember.$('.rant-item').addClass('slide-out-right');
-            }, 250);
+            }, 300);
           }.bind(self));
         }
       });
     },
 
-  }
 
+  }
 });
