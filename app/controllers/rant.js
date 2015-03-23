@@ -9,16 +9,14 @@ export default Ember.ObjectController.extend({
       this.set('isEditing', true);
     },
 
-    saveRant: function () {
+    updateRant: function (rant) {
       var title = this.get('title'),
           body = this.get('body'),
           self = this;
       this.store.find('user', this.get('session.user_id')).then(function(current) {
         if (body && body.length >= 144 && title) {
-          var rant = self.store.createRecord('rant',
-                                            { body: body,
-                                              title: title,
-                                              user: current, });
+          rant.set('title', title);
+          rant.set('body', body)
           rant.save().then(function () {
             self.set('isEditing', false);
           });
@@ -26,9 +24,15 @@ export default Ember.ObjectController.extend({
       });
     },
 
-      cancelEdit: function () {
-        this.set('isEditing', false);
-      }
+    cancelEdit: function () {
+      this.set('isEditing', false);
+    },
 
+    deleteRant: function (rant) {
+      Ember.$('.button-danger').parents('article').addClass('fade-out');
+      Ember.run.later(function () {
+        rant.destroyRecord();
+      }, 400);
+    },
   }
 });

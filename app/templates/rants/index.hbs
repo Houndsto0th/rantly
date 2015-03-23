@@ -2,56 +2,7 @@
   <section class="rants-index">
 
   {{#each rant in controller itemController='rant'}}
-    <article class="rant-item">
-      <header class="rant-header">
-        <div class="rant-header-title">
-          {{#if rant.isEditing}}
-              {{input value=rant.title}}
-            {{else}}
-              <h3>{{rant.title}}</h3>
-            {{/if}}
-        </div>
-
-        <div class="rant-header-actions">
-          {{#if session.isAuthenticated}}
-            {{#is-owner rantuid=rant.data.user sessionuid=session.user_id}}
-            {{#if rant.isEditing}}
-            <button {{action 'saveRant'}} class="button button-primary">
-              <span class="fa fa-send"> Rant</span>
-            </button>
-              <button {{action 'cancelEdit'}} class="button button-default">
-                <span class="fa fa-times-circle-o"> Cancel</span>
-              </button>
-              {{else}}
-              <button {{action 'editRant'}}class="button button-primary"><i class="fa fa-pencil-square-o">Edit</i></button>
-              {{/if}}
-            {{/is-owner}}
-          {{/if}}
-        </div>
-      </header>
-
-      <aside class="rant-secondary">
-        <div class="author"><div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo"></div>
-        <h5></h5>
-        <h6></h6>
-        {{#if rant.isEditing}}
-        <div>
-          {{rant.body.length}}  / 144 characters
-        </div>
-        {{/if}}
-      </div>
-    </aside>
-
-    <section class="rant-item-content">
-      {{#if rant.isEditing}}
-        {{textarea value=rant.body}}
-      {{else}}
-        {{rant.body}}
-      {{/if}}
-    </section>
-
-  </article>
-
+    {{single-rant rant=rant deleteRant="deleteRant" editRant="editRant" cancelEdit="cancelEdit" updateRant="updateRant"}}
   {{/each}}
   </section>
 

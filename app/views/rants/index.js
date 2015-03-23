@@ -7,8 +7,7 @@ export default Ember.View.extend({
 
   this.$().on('click', '.button-invert', function (){
     $('.rant-item').addClass('slide-out-right');
-
-  });
+    });
   },
 
 });
