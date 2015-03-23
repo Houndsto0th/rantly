@@ -23,7 +23,7 @@
 
     <form class="login-form" {{action 'authenticate' on='submit'}}>
       {{#if session.isAuthenticated}}
-      <h4>Hi {{session.user_first_name}}</h4>
+      <h4 class="login-welcome">Hi {{session.user_first_name}}</h4>
       {{else}}
         <div class="form-group">
           {{input id='identification' placeholder='Enter Email' value=identification}}
@@ -36,9 +36,14 @@
         </div>
       {{/if}}
       {{#if session.isAuthenticated}}
-        <button class="button button-primary button-lg button-block" {{action 'invalidateSession'}}>Logout</button>
+          <div class="login-photo">
+            <div class="author">
+              {{gravatar-image email=session.email size=250 class='author-photo'}}
+            </div>
+          </div>
+        <button class="button button-primary button-lg button-block" {{action 'invalidateSession'}}>Sign Out</button>
       {{else}}
-        <button class="button button-primary button-lg button-block" type='submit'>Login</button>
+        <button class="button button-primary button-lg button-block" type='submit'>Sign In</button>
       {{/if}}
 
     </form>
