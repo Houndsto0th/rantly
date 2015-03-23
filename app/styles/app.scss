@@ -469,13 +469,13 @@ textarea:focus {
 }
 
 .login-welcome {
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .login-photo {
   display: block;
-  width: 55%;
-  height: 25%;
+  width: 75%;
+  height: 100px;
   margin: 0 auto;
 }
 
@@ -485,7 +485,7 @@ textarea:focus {
     height: 100px;
     margin-bottom: 15px;
     color: #34495E;
-    background: url(../img/author-photo-db65e861597528b36484917f92f1e0b3.png) center/cover no-repeat;
+    background: center no-repeat;
     border: 4px dashed;
     border-radius: 25px 25px 0
 }

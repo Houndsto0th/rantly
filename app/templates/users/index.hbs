@@ -1,0 +1,11 @@
+<main id="scroll">
+  <section class="author-index">
+    {{#each user in model}}
+      <div class="author">
+        {{gravatar-image email=user.email class='author-photo'}}
+        <h5>{{user.first_name}} {{user.last_name}}</h5>
+        <h6>{{user.email}}</h6>
+      </div>
+    {{/each}}
+  </section>
+</main>

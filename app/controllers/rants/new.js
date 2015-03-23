@@ -25,10 +25,10 @@ export default Ember.ObjectController.extend({
           self.set("title", '');
           self.set("body", '')
           rant.save().then(function () {
-            self.transitionToRoute('rants.index');
-            Ember.run.later(function () {
               Ember.$('.rant-item').addClass('slide-out-right');
-            }, 300);
+            Ember.run.later(function () {
+            self.transitionToRoute('rants.index');
+            }, 100);
           }.bind(self));
         }
       });

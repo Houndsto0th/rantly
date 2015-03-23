@@ -6,8 +6,8 @@
         {{else}}
         <li>{{#link-to 'rants.signup'}}Signup{{/link-to}}</li>
         {{/if}}
-        <li>{{#link-to 'rants'}}Users{{/link-to}}</li>
-        <li>{{#link-to 'rants.index'}}Rants{{/link-to}}</li>
+        <li>{{#link-to 'users'}}Users{{/link-to}}</li>
+        <li>{{#link-to 'rants'}}Rants{{/link-to}}</li>
     </ul>
 
     </div>
@@ -23,7 +23,7 @@
 
     <form class="login-form" {{action 'authenticate' on='submit'}}>
       {{#if session.isAuthenticated}}
-      <h4 class="login-welcome">Hi {{session.user_first_name}}</h4>
+      <h4 class="hero">Hi {{session.user_first_name}}</h4>
       {{else}}
         <div class="form-group">
           {{input id='identification' placeholder='Enter Email' value=identification}}
@@ -60,7 +60,5 @@
       {{/link-to}}
   {{/if}}
 </header>
-
-
   {{outlet}}
 </section>
