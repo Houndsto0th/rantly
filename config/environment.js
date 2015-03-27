@@ -43,6 +43,7 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
+    serverTokenEndpoint:  'https://rantly-serverbk.herokuapp.com/users/sign_in',
     crossOriginWhitelist: ['*'],
     identificationAttributeName: 'email'
   };
