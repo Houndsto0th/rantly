@@ -16,10 +16,10 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
     'default-src': "'none'",
     'script-src': "'self'",
-    'font-src': "'self' http://fonts.gstatic.com http://maxcdn.bootstrapcdn.com/",
+    'font-src': "'self' https://fonts.gstatic.com http://maxcdn.bootstrapcdn.com/",
     'connect-src': "'self' localhost:3000 https://rantly-serverbk.herokuapp.com/",
     'img-src': "'self' http://www.gravatar.com/",
-    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/",
+    'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com http://maxcdn.bootstrapcdn.com/",
     'media-src': "'self'"
   },
 

@@ -1,6 +1,8 @@
 import Ember from "ember";
 
 export default Ember.ObjectController.extend({
+  rantShort: false,
+  titleMissing: false,
 
   actions: {
     goToRants: function () {
@@ -17,7 +19,19 @@ export default Ember.ObjectController.extend({
           title = this.get('rantTitle'),
           self  = this;
       this.store.find('user', this.get('session.user_id')).then(function(current) {
+
+        if (body && body.length <= 143) {
+          self.set("rantShort", true);
+        } else if (!body) {
+          self.set("rantShort", true);
+        }
+        if (!title) {
+          self.set("titleMissing", true);
+        }
+
         if (body && body.length >= 144 && title) {
+          self.set("rantShort", false);
+          self.set("titleMissing", false);
           var rant = self.store.createRecord('rant',
                                             { body: body,
                                               title: title,

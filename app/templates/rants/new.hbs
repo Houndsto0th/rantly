@@ -24,6 +24,16 @@
     </div>
     <div {{bind-attr class= "rantLongEnough:long:short"}}>
       {{rantContent.length}}  / 144 characters
+      {{#if rantShort}}
+        <p class="error-message">
+          Your rant needs to be at least 144 Characters!
+        </p>
+      {{/if}}
+      {{#if rantShort}}
+        <p class="error-message">
+          You need a title!
+        </p>
+      {{/if}}
     </div>
   </aside>
 

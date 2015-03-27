@@ -1,7 +1,14 @@
 @import 'materialize';
 
+.error-message {
+  color: #e2463b;
+  font-size: 15px;
+  font-weight: light;
+}
+
 .rantly-blue {
   background-color: #34495E;
+
 }
 
 
@@ -16,7 +23,7 @@ nav .brand-logo {
 nav ul li {
   font-weight: bold;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-size: 25px
+  font-size: 25px;
 }
 @import url(https://fonts.googleapis.com/css?family=Laila:400,700);
 @import url(https://fonts.googleapis.com/css?family=Hind:400,700,300);
