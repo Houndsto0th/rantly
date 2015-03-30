@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('rants', {path: '/'}, function () {
     this.route('new');
     this.route('signup');
+    this.route('search');
   });
 
   this.resource('users', function () {

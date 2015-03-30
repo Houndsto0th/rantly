@@ -1,0 +1,10 @@
+<main id="scroll">
+  {{#if model}}
+    {{#each rant in model}}
+      {{single-rant rant=rant deleteRant="deleteRant" editRant="editRant" cancelEdit="cancelEdit" updateRant="updateRant"}}
+    {{/each}}
+    {{else}}
+    <h1>These aren't the droids you're looking for.</h1>
+  {{/if}}
+
+</main>

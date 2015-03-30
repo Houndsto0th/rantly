@@ -29,6 +29,13 @@ export default Ember.ObjectController.extend({
           self.set("titleMissing", true);
         }
 
+        if (body && body.length >= 144) {
+          self.set("rantShort", false);
+        }
+        if (title) {
+          self.set("titleMissing", false);
+        }
+
         if (body && body.length >= 144 && title) {
           self.set("rantShort", false);
           self.set("titleMissing", false);
